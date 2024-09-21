@@ -4,9 +4,79 @@
   <meta charset="UTF-8">
   <title>Flores y corazones</title>
   <link rel="stylesheet" href="./style.css">
+<!-- <style>
+  body {
+    margin: 0;
+    height: 100vh;
+    /* Asegura que el body ocupe toda la altura */
+    display: flex;
+    justify-content: flex-end;
+    /* Alinea el contenido a la derecha */
+    align-items: flex-start;
+    /* Alinea el contenido a la parte superior */
+    padding: 10px;
+    /* Espaciado alrededor del botón */
+  }
 
+  #music-button {
+    background-color: #ffcc00;
+    /* Color de fondo amarillo */
+    border: none;
+    /* Sin borde */
+    color: white;
+    /* Color del texto blanco */
+    padding: 15px 32px;
+    /* Espaciado dentro del botón */
+    font-size: 16px;
+    /* Tamaño de fuente */
+    cursor: pointer;
+    /* Cambia el cursor a "pointer" (mano) */
+    border-radius: 12px;
+    /* Bordes redondeados */
+    transition: background-color 0.3s ease;
+    /* Transición suave al pasar el mouse */
+  }
+
+  #music-button:hover {
+    background-color: #ff9900;
+    /* Cambiar color al pasar el mouse */
+  }
+</style> -->
 </head>
 <body>
+  <audio id="background-music" muted>
+    <source src="Music/Y2meta.app - Floricienta - Flores Amarillas (Official Video) (128 kbps).mp3" type="audio/mpeg">
+    Tu navegador no soporta el elemento de audio.
+  </audio>
+  
+  <button id="music-button" onclick="toggleMusic()">Reproducir Música</button>
+  
+  <script>
+    var hasInteracted = false; // Variable para controlar la primera interacción
+
+    document.body.addEventListener('click', function () {
+      if (!hasInteracted) { // Solo ejecuta en la primera interacción
+        var music = document.getElementById("background-music");
+        music.muted = false; // Quita el mute después de la primera interacción
+        music.play(); // Reproduce la música
+        document.getElementById("music-button").textContent = "Pausar Música";
+        hasInteracted = true; // Evita que esto se ejecute más de una vez
+      }
+    });
+
+    function toggleMusic() {
+      var music = document.getElementById("background-music");
+      var button = document.getElementById("music-button");
+      if (music.paused) {
+        music.play();
+        button.textContent = "Pausar Música";
+      } else {
+        music.pause();
+        button.textContent = "Reproducir Música";
+      }
+    }
+  </script>
+
 <!-- partial:index.partial.html -->
 <body class="container">
   <div class="night"></div>

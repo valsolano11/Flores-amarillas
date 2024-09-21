@@ -148,6 +148,75 @@
 </head>
 
 <body>
+<!-- <audio id="background-music" controls>
+    <source src="Music/Y2meta.app - Floricienta - Flores Amarillas (Official Video) (128 kbps).mp3"
+        type="audio/mpeg">
+    <source src="Music/Y2meta.app - Floricienta - Flores Amarillas (Official Video) (128 kbps).mp3" type="audio/ogv">
+    Tu navegador no soporta el elemento de audio.
+</audio>
+
+<button id="music-button" onclick="toggleMusic()">Reproducir Música</button>
+
+<script>
+    var hasInteracted = false; // Variable para controlar la primera interacción
+
+    document.body.addEventListener('click', function () {
+        if (!hasInteracted) { // Solo ejecuta en la primera interacción
+            var music = document.getElementById("background-music");
+            music.muted = false; // Quita el mute después de la primera interacción
+            music.play(); // Reproduce la música
+            document.getElementById("music-button").textContent = "Pausar Música";
+            hasInteracted = true; // Evita que esto se ejecute más de una vez
+        }
+    });
+
+    function toggleMusic() {
+        var music = document.getElementById("background-music");
+        var button = document.getElementById("music-button");
+        if (music.paused) {
+            music.play();
+            button.textContent = "Pausar Música";
+        } else {
+            music.pause();
+            button.textContent = "Reproducir Música";
+        }
+    }
+</script>
+
+<style>
+    #music-button {
+        background-color: #ffcc00;
+        /* Color de fondo amarillo */
+        border: none;
+        /* Sin borde */
+        color: white;
+        /* Color del texto blanco */
+        padding: 15px 32px;
+        /* Espaciado dentro del botón */
+        text-align: center;
+        /* Centrar texto */
+        text-decoration: none;
+        /* Sin subrayado */
+        display: inline-block;
+        /* Mostrar como elemento inline-block */
+        font-size: 16px;
+        /* Tamaño de fuente */
+        margin: 10px 2px;
+        /* Margen alrededor del botón */
+        cursor: pointer;
+        /* Cambia el cursor a "pointer" (mano) */
+        border-radius: 12px;
+        /* Bordes redondeados */
+        transition: background-color 0.3s ease;
+        /* Transición suave al pasar el mouse */
+    }
+
+    #music-button:hover {
+        background-color: #ff9900;
+        /* Cambiar color al pasar el mouse */
+    }
+</style> -->
+
     <div>
         <h1>MI AMOR</h1>
         <h2>Tengo un regalo para ti</h2>
@@ -293,6 +362,7 @@
                     d="M23.6 2c-3.363 0-6.258 2.736-7.599 5.594-1.342-2.858-4.237-5.594-7.601-5.594-4.637 0-8.4 3.764-8.4 8.401 0 9.433 9.516 11.906 16.001 21.232 6.13-9.268 15.999-12.1 15.999-21.232 0-4.637-3.763-8.401-8.4-8.401z">
                 </path>
             </svg>
+            
 </body>
 
 </html>
