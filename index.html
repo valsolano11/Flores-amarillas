@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi amor</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lobster&display=swap" rel="stylesheet">
+    <!-- Fuentes nuevas -->
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000;
+            /* Fondo negro */
+            font-family: 'Garamond'; /* Cambiar a Lobster */
+            /* Usar la fuente principal */
+        }
+
+        h1 {
+            color: #ffd700;
+            /* Color amarillo */
+            text-shadow: 2px 2px 10px rgba(255, 215, 0, 0.8);
+            /* Sombra suave amarilla */
+            text-align: center;
+            font-size: 6vw;
+            /* Tamaño más pequeño */
+            animation: slideInLeft 2s ease-in-out forwards;
+            /* Animación sensual de izquierda a derecha */
+        }
+
+        h2 {
+            color: #f3f3f0;
+            /* Color rosa para la frase */
+            font-family: 'Bodoni'; /* Cambiar a Dancing Script */
+            /* Nueva fuente para la frase */
+            font-size: 4vw;
+            /* Tamaño más grande */
+            margin-top: 10px;
+            /* Menos separación */
+            animation: slideInLeft 2.5s ease-in-out forwards;
+            /* Animación sensual de izquierda a derecha con retraso */
+            text-align: center;
+        }
+
+        button {
+            font-size: 1.8vw;
+            /* Tamaño de fuente más pequeño */
+            padding: 10px 20px;
+            /* Botón más pequeño */
+            margin-top: 80px;
+            /* Menos separación del texto */
+            background-color: white;
+            /* Botón blanco */
+            color: black;
+            /* Texto negro */
+            cursor: pointer;
+            border: 2px solid black;
+            /* Borde negro */
+            border-radius: 50px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+            transition: all 0.3s ease;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            /* Para posicionar corazones */
+        }
+
+        button:hover {
+            background-color: #ffffff;
+            /* Color amarillo claro al hacer hover */
+            color: black;
+        }
+
+        button:hover::before {
+            top: -20px;
+            left: -30px;
+        }
+
+        button:hover::after {
+            top: -20px;
+            right: -30px;
+        }
+
+        /* Corazones adicionales */
+        button:hover::nth-child(2) {
+            content: "❤";
+            top: -30px;
+            left: 20px;
+        }
+
+        button:hover::nth-child(3) {
+            content: "❤";
+            top: 10px;
+            left: -50px;
+        }
+
+        /* Añadir corazones adicionales alrededor del botón */
+        button::before,
+        button::after {
+            content: "❤";
+            font-size: 1.5vw;
+            position: absolute;
+            color: #ff69b4;
+            opacity: 0;
+        }
+
+        button:hover::before,
+        button:hover::after {
+            animation: heartAround 1.5s ease-in-out forwards;
+        }
+
+        @keyframes slideInLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-100px);
+                /* Comienza desde la izquierda */
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+                /* Se mueve a su posición final */
+            }
+        }
+
+        @keyframes heartAround {
+            0% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1) translateY(-20px);
+                /* Los corazones flotan hacia arriba */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>MI AMOR</h1>
+        <h2>Tengo un regalo para ti</h2>
+        <button onclick="window.location.href='rosas.html'">Ver regalo</button>
+    </div>
+    <div class="bubbles">
+        <div class="bubble"><svg class="heart" viewBox="0 0 32 32">
+                <title>heart22</title>
+                <path
+                    d="M23.6 2c-3.363 0-6.258 2.736-7.599 5.594-1.342-2.858-4.237-5.594-7.601-5.594-4.637 0-8.4 3.764-8.4 8.401 0 9.433 9.516 11.906 16.001 21.232 6.13-9.268 15.999-12.1 15.999-21.232 0-4.637-3.763-8.401-8.4-8.401z">
+                </path>
+            </svg>
+        </div>
+        <div class="bubble"><svg class="heart" viewBox="0 0 32 32">
+                <title>heart22</title>
+                <path
+                    d="M23.6 2c-3.363 0-6.258 2.736-7.599 5.594-1.342-2.858-4.237-5.594-7.601-5.594-4.637 0-8.4 3.764-8.4 8.401 0 9.433 9.516 11.906 16.001 21.232 6.13-9.268 15.999-12.1 15.999-21.232 0-4.637-3.763-8.401-8.4-8.401z">
+                </path>
+            </svg>
+        </div>
+        <div class="bubble"><svg class="heart" viewBox="0 0 32 32">
+                <title>heart22</title>
+                <path
+                    d="M23.6 2c-3.363 0-6.258 2.736-7.599 5.594-1.342-2.858-4.237-5.594-7.601-5.594-4.637 0-8.4 3.764-8.4 8.401 0 9.433 9.516 11.906 16.001 21.232 6.13-9.268 15.999-12.1 15.999-21.232 0-4.637-3.763-8.401-8.4-8.401z">
+                </path>
+            </svg>
+        </div>
+        <div class="bubble"><svg class="heart" viewBox="0 0 32 32">
+                <title>heart22</title>
+                <path
+                    d="M23.6 2c-3.363 0-6.258 2.736-7.599 5.594-1.342-2.858-4.237-5.594-7.601-5.594-4.637 0-8.4 3.764-8.4 8.401 0 9.433 9.516 11.906 16.001 21.232 6.13-9.268 15.999-12.1 15.999-21.232 0-4.637-3.763-8.401-8.4-8.401z">
+                </path>
+            </svg>
+        </div>
+        <div class="bubble"><svg class="heart" viewBox="0 0 32 32">
+                <title>heart22</title>
+                <path
+                    d="M23.6 2c-3.363 0-6.258 2.736-7.599 5.594-1.342-2.858-4.237-5.594-7.601-5.594-4.637 0-8.4 3.764-8.4 8.401 0 9.433 9.516 11.906 16.001 21.232 6.13-9.268 15.999-12.1 15.999-21.232 0-4.637-3.763-8.401-8.4-8.401z">
+                </path>
+            </svg>
+        </div>
+        <div class="bubble"><svg class="heart" viewBox="0 0 32 32">
+                <title>heart22</title>
+                <path
+                    d="M23.6 2c-3.363 0-6.258 2.736-7.599 5.594-1.342-2.858-4.237-5.594-7.601-5.594-4.637 0-8.4 3.764-8.4 8.401 0 9.433 9.516 11.906 16.001 21.232 6.13-9.268 15.999-12.1 15.999-21.232 0-4.637-3.763-8.401-8.4-8.401z">
+                </path>
+            </svg>
+        </div>
+        <div class="bubble"><svg class="heart" viewBox="0 0 32 32">
+                <title>heart22</title>
+                <path
+                    d="M23.6 2c-3.363 0-6.258 2.736-7.599 5.594-1.342-2.858-4.237-5.594-7.601-5.594-4.637 0-8.4 3.764-8.4 8.401 0 9.433 9.516 11.906 16.001 21.232 6.13-9.268 15.999-12.1 15.999-21.232 0-4.637-3.763-8.401-8.4-8.401z">
+                </path>
+            </svg>
+        </div>
+        <div class="bubble"><svg class="heart" viewBox="0 0 32 32">
+                <title>heart22</title>
+                <path
+                    d="M23.6 2c-3.363 0-6.258 2.736-7.599 5.594-1.342-2.858-4.237-5.594-7.601-5.594-4.637 0-8.4 3.764-8.4 8.401 0 9.433 9.516 11.906 16.001 21.232 6.13-9.268 15.999-12.1 15.999-21.232 0-4.637-3.763-8.401-8.4-8.401z">
+                </path>
+            </svg>
+        </div>
+        <div class="bubble"><svg class="heart" viewBox="0 0 32 32">
+                <title>heart22</title>
+                <path
+                    d="M23.6 2c-3.363 0-6.258 2.736-7.599 5.594-1.342-2.858-4.237-5.594-7.601-5.594-4.637 0-8.4 3.764-8.4 8.401 0 9.433 9.516 11.906 16.001 21.232 6.13-9.268 15.999-12.1 15.999-21.232 0-4.637-3.763-8.401-8.4-8.401z">
+                </path>
+            </svg>
+        </div>
+        <div class="bubble"><svg class="heart" viewBox="0 0 32 32">
+                <title>heart22</title>
+                <path
+                    d="M23.6 2c-3.363 0-6.258 2.736-7.599 5.594-1.342-2.858-4.237-5.594-7.601-5.594-4.637 0-8.4 3.764-8.4 8.401 0 9.433 9.516 11.906 16.001 21.232 6.13-9.268 15.999-12.1 15.999-21.232 0-4.637-3.763-8.401-8.4-8.401z">
+                </path>
+            </svg>
+        </div>
+        <div class="bubble"><svg class="heart" viewBox="0 0 32 32">
+                <title>heart22</title>
+                <path
+                    d="M23.6 2c-3.363 0-6.258 2.736-7.599 5.594-1.342-2.858-4.237-5.594-7.601-5.594-4.637 0-8.4 3.764-8.4 8.401 0 9.433 9.516 11.906 16.001 21.232 6.13-9.268 15.999-12.1 15.999-21.232 0-4.637-3.763-8.401-8.4-8.401z">
+                </path>
+            </svg>
+        </div>
+        <div class="bubble"><svg class="heart" viewBox="0 0 32 32">
+                <title>heart22</title>
+                <path
+                    d="M23.6 2c-3.363 0-6.258 2.736-7.599 5.594-1.342-2.858-4.237-5.594-7.601-5.594-4.637 0-8.4 3.764-8.4 8.401 0 9.433 9.516 11.906 16.001 21.232 6.13-9.268 15.999-12.1 15.999-21.232 0-4.637-3.763-8.401-8.4-8.401z">
+                </path>
+            </svg>
+        </div>
+        <div class="bubble"><svg class="heart" viewBox="0 0 32 32">
+                <title>heart22</title>
+                <path
+                    d="M23.6 2c-3.363 0-6.258 2.736-7.599 5.594-1.342-2.858-4.237-5.594-7.601-5.594-4.637 0-8.4 3.764-8.4 8.401 0 9.433 9.516 11.906 16.001 21.232 6.13-9.268 15.999-12.1 15.999-21.232 0-4.637-3.763-8.401-8.4-8.401z">
+                </path>
+            </svg>
+        </div>
+        <div class="bubble"><svg class="heart" viewBox="0 0 32 32">
+                <title>heart22</title>
+                <path
+                    d="M23.6 2c-3.363 0-6.258 2.736-7.599 5.594-1.342-2.858-4.237-5.594-7.601-5.594-4.637 0-8.4 3.764-8.4 8.401 0 9.433 9.516 11.906 16.001 21.232 6.13-9.268 15.999-12.1 15.999-21.232 0-4.637-3.763-8.401-8.4-8.401z">
+                </path>
+            </svg>
+        </div>
+        <div class="bubble"><svg class="heart" viewBox="0 0 32 32">
+                <title>heart22</title>
+                <path
+                    d="M23.6 2c-3.363 0-6.258 2.736-7.599 5.594-1.342-2.858-4.237-5.594-7.601-5.594-4.637 0-8.4 3.764-8.4 8.401 0 9.433 9.516 11.906 16.001 21.232 6.13-9.268 15.999-12.1 15.999-21.232 0-4.637-3.763-8.401-8.4-8.401z">
+                </path>
+            </svg>
+        </div>
+        <div class="bubble"><svg class="heart" viewBox="0 0 32 32">
+                <title>heart22</title>
+                <path
+                    d="M23.6 2c-3.363 0-6.258 2.736-7.599 5.594-1.342-2.858-4.237-5.594-7.601-5.594-4.637 0-8.4 3.764-8.4 8.401 0 9.433 9.516 11.906 16.001 21.232 6.13-9.268 15.999-12.1 15.999-21.232 0-4.637-3.763-8.401-8.4-8.401z">
+                </path>
+            </svg>
+        </div>
+        <div class="bubble"><svg class="heart" viewBox="0 0 32 32">
+                <title>heart22</title>
+                <path
+                    d="M23.6 2c-3.363 0-6.258 2.736-7.599 5.594-1.342-2.858-4.237-5.594-7.601-5.594-4.637 0-8.4 3.764-8.4 8.401 0 9.433 9.516 11.906 16.001 21.232 6.13-9.268 15.999-12.1 15.999-21.232 0-4.637-3.763-8.401-8.4-8.401z">
+                </path>
+            </svg>
+        </div>
+        <div class="bubble"><svg class="heart" viewBox="0 0 32 32">
+                <title>heart22</title>
+                <path
+                    d="M23.6 2c-3.363 0-6.258 2.736-7.599 5.594-1.342-2.858-4.237-5.594-7.601-5.594-4.637 0-8.4 3.764-8.4 8.401 0 9.433 9.516 11.906 16.001 21.232 6.13-9.268 15.999-12.1 15.999-21.232 0-4.637-3.763-8.401-8.4-8.401z">
+                </path>
+            </svg>
+        </div>
+        <div class="bubble"><svg class="heart" viewBox="0 0 32 32">
+                <title>heart22</title>
+                <path
+                    d="M23.6 2c-3.363 0-6.258 2.736-7.599 5.594-1.342-2.858-4.237-5.594-7.601-5.594-4.637 0-8.4 3.764-8.4 8.401 0 9.433 9.516 11.906 16.001 21.232 6.13-9.268 15.999-12.1 15.999-21.232 0-4.637-3.763-8.401-8.4-8.401z">
+                </path>
+            </svg>
+        </div>
+        <div class="bubble"><svg class="heart" viewBox="0 0 32 32">
+                <title>heart22</title>
+                <path
+                    d="M23.6 2c-3.363 0-6.258 2.736-7.599 5.594-1.342-2.858-4.237-5.594-7.601-5.594-4.637 0-8.4 3.764-8.4 8.401 0 9.433 9.516 11.906 16.001 21.232 6.13-9.268 15.999-12.1 15.999-21.232 0-4.637-3.763-8.401-8.4-8.401z">
+                </path>
+            </svg>
+</body>
+
+</html>
